@@ -22,6 +22,8 @@ namespace ebatevn.Controllers
 
         public IActionResult About()
         {
+            var setting = dbContext.Settings.Find(m => m.Key.Equals("about.title")).FirstOrDefault();
+            ViewData["Title"] = setting.Title;
             ViewData["Message"] = "Your application description page.";
 
             return View();
