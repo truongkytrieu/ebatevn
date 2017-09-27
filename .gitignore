@@ -2,7 +2,7 @@
 #mycode.class
 
 # ignore an entire directory
-/ebatevn/.vs/
+/.vs/
 
 # ignore a file type
 *.json
