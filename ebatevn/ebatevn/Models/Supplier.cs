@@ -32,6 +32,8 @@ namespace ebatevn.Models
 
         public bool Enable { get; set; }
 
+        public int Count { get; set; }
+
         [Required]
         public string Language { get; set; }
     }
