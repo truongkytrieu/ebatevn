@@ -2,7 +2,7 @@
 #mycode.class
 
 # ignore an entire directory
-/ebatevn/.vs/
+#/ebatevn/.vs/
 
 # ignore a file type
 *.ide
