@@ -53,6 +53,7 @@ namespace ebatevn.Controllers
             {
                 // TODO: Add insert logic here
                 //entity.Id = Guid.NewGuid();
+                // Consoe
                 dbContext.Settings.InsertOne(entity);
                 // Clear cached
                 var cacheSettingKey = Constants.Caches.Settings;
