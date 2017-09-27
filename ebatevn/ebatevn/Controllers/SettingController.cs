@@ -8,12 +8,21 @@ using ebatevn.Data;
 using ebatevn.Models;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using Microsoft.Extensions.Caching.Distributed;
+using ebatevn.Helpers;
 
 namespace ebatevn.Controllers
 {
     public class SettingController : Controller
     {
         MongoDBContext dbContext = new MongoDBContext();
+
+        private readonly IDistributedCache _cache;
+
+        public SettingController(IDistributedCache cache)
+        {
+            _cache = cache;
+        }
 
         // GET: Setting
         public ActionResult Index()
@@ -45,7 +54,9 @@ namespace ebatevn.Controllers
                 // TODO: Add insert logic here
                 //entity.Id = Guid.NewGuid();
                 dbContext.Settings.InsertOne(entity);
-
+                // Clear cached
+                var cacheSettingKey = Constants.Caches.Settings;
+                _cache.Remove(cacheSettingKey);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -71,6 +82,13 @@ namespace ebatevn.Controllers
                 // TODO: Add update logic here
                 // You can use the UpdateOne to get higher performance if you need.
                 dbContext.Settings.ReplaceOne(m => m.Id == entity.Id, entity);
+                var cacheSettingKey = Constants.Caches.Settings;
+                _cache.Remove(cacheSettingKey);
+                if (entity.Key == "home.title")
+                {
+                    var cacheKeyHomeTitle = Constants.Caches.HomeTitle;
+                    _cache.Remove(cacheKeyHomeTitle);
+                }
                 return RedirectToAction(nameof(Index));
             }
             catch
