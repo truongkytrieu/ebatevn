@@ -1,0 +1,10 @@
+Link: https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/#procedures
+[When you run mongodump without any arguments, the command connects to the MongoDB instance on the local system 
+(e.g. 127.0.0.1 or localhost) on port 27017 and creates a database backup named dump/ in the current directory.]
+
+To limit the amount of data included in the database dump, you can specify --db and --collection as options to mongodump. For example:
+
+>> mongodump --db ebatevn --out c:/projects/ebatevn/data_src/db/
+
+Restore:
+>> mongorestore --db ebatevn c:/projects/ebatevn/data_src/db/ebatevn/
