@@ -13526,11 +13526,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Projects\\ebatevn\\ebatevn\\ebatevn\\ebatevn.csproj",
+      "projectUniqueName": "C:\\Users\\xuant\\Documents\\ebatevn\\ebatevn\\ebatevn\\ebatevn.csproj",
       "projectName": "ebatevn",
-      "projectPath": "C:\\Projects\\ebatevn\\ebatevn\\ebatevn\\ebatevn.csproj",
+      "projectPath": "C:\\Users\\xuant\\Documents\\ebatevn\\ebatevn\\ebatevn\\ebatevn.csproj",
       "packagesPath": "C:\\Users\\xuant\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\ebatevn\\ebatevn\\ebatevn\\obj\\",
+      "outputPath": "C:\\Users\\xuant\\Documents\\ebatevn\\ebatevn\\ebatevn\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

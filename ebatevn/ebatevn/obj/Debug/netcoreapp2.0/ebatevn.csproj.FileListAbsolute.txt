@@ -10,3 +10,15 @@ C:\Projects\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.AssemblyInfo
 C:\Projects\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.dll
 C:\Projects\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.pdb
 C:\Projects\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\bin\Debug\netcoreapp2.0\ebatevn.deps.json
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\bin\Debug\netcoreapp2.0\ebatevn.runtimeconfig.json
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\bin\Debug\netcoreapp2.0\ebatevn.runtimeconfig.dev.json
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\bin\Debug\netcoreapp2.0\ebatevn.dll
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\bin\Debug\netcoreapp2.0\ebatevn.pdb
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.csprojResolveAssemblyReference.cache
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.csproj.CoreCompileInputs.cache
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.AssemblyInfoInputs.cache
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.AssemblyInfo.cs
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.dll
+C:\Users\xuant\Documents\ebatevn\ebatevn\ebatevn\obj\Debug\netcoreapp2.0\ebatevn.pdb
