@@ -40,6 +40,14 @@ namespace ebatevn
             MongoDBContext.DatabaseName = Configuration.GetSection("MongoConnection:DatabaseName").Value;
             MongoDBContext.IsSSL = Convert.ToBoolean(Configuration.GetSection("MongoConnection:IsSSL").Value);
 
+            services.AddDistributedRedisCache(options =>
+            {
+                options.InstanceName = Configuration.GetValue<string>("redis:name");
+                options.Configuration = Configuration.GetValue<string>("redis:host");
+            });
+
+            services.AddSession();
+
             services.AddMvc();
         }
 
@@ -60,6 +68,8 @@ namespace ebatevn
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
