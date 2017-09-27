@@ -8,12 +8,21 @@ using ebatevn.Data;
 using ebatevn.Models;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using Newtonsoft.Json;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace ebatevn.Controllers
 {
     public class PostController : Controller
     {
         MongoDBContext dbContext = new MongoDBContext();
+
+        private readonly IDistributedCache _cache;
+
+        public PostController(IDistributedCache cache)
+        {
+            _cache = cache;
+        }
 
         // GET: Post
         public ActionResult Index()
@@ -101,5 +110,45 @@ namespace ebatevn.Controllers
                 return View();
             }
         }
+
+        #region IMPLEMENT REDIS CACHE
+        [HttpGet]
+        public async Task<string> Get()
+        {
+            var cacheKey = "TheTime";
+            var existingTime = _cache.GetString(cacheKey);
+            if (!string.IsNullOrEmpty(existingTime))
+            {
+                return "Fetched from cache : " + existingTime;
+            }
+            else
+            {
+                existingTime = DateTime.UtcNow.ToString();
+                _cache.SetString(cacheKey, existingTime);
+                return "Added to cache : " + existingTime;
+            }
+        }
+
+
+        [HttpGet]
+        public async Task<string> GetList()
+        {
+            var cacheKey = "Setting";
+            var values = _cache.GetString(cacheKey);
+            if (!string.IsNullOrEmpty(values))
+            {
+                return values;
+            }
+            else
+            {
+                var itemsFromjSON = dbContext.Posts.Find(m => true).ToList();
+                values = JsonConvert.SerializeObject(itemsFromjSON);
+                _cache.SetString(cacheKey, values);
+                return "Added to cache : " + values;
+            }
+
+            //var itemsFromjSON = JsonConvert.DeserializeObject<IEnumerable<TwitterItem>>(jSONText);
+        }
+        #endregion
     }
 }
