@@ -30,10 +30,6 @@ namespace ebatevn.Models
 
         public DateTime End { get; set; }
 
-        public int Ttt { get; set; }
-
-        public int Test { get; set; }
-
         [Required]
         public string Language { get; set; }
     }
