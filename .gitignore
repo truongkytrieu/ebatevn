@@ -6,6 +6,7 @@
 
 # ignore a file type
 *.json
+*.ide
 
 # add an exception (using !) to the preceding rule to track a specific file
 !package.json
