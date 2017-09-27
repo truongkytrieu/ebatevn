@@ -30,6 +30,8 @@ namespace ebatevn.Models
 
         public DateTime End { get; set; }
 
+        public bool Enable { get; set; }
+
         [Required]
         public string Language { get; set; }
     }
